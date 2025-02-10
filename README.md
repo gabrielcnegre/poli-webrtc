@@ -39,6 +39,8 @@ Para começar, abra **dois terminais** no seu computador. Em um deles, você dec
 nc -l 12345
 ```
 
+> Atenção, algumas versões do nc requerem o parametro `-p`, então: `nc -l -p 12345`
+
 Agora, no outro terminal, você precisa descobrir quais IPs estão disponíveis no seu computador:
 
 ```bash
@@ -70,7 +72,7 @@ Mas… nada acontece. Seu colega não consegue se conectar. Mas como pode ser is
 
 ### Parece que tem algo entre nós...
 
-O problema é que, em algum momento, os provedores de internet perceberam que os endereços IPv4 não seriam suficientes para todos os dispositivos do mundo. A solução foi criar dois tipos de IP: **IP público e IP privado**. Dentro da sua casa ou empresa, cada dispositivo recebe um **IP privado**, mas, para o resto da internet, todos parecem compartilhar um único **IP público**, fornecido pelo roteador. Essa camada de separação impede conexões diretas da internet para dentro da sua rede.
+O problema é que, em algum momento, os provedores de internet perceberam que os endereços IPv4 não seriam suficientes para todos os dispositivos do mundo. A solução foi criar dois tipos de IP: **IP público e IP privado**. Dentro da sua casa ou empresa, cada dispositivo recebe um **IP privado**, mas, para o resto da internet, todos parecem compartilhar um único **IP público**, fornecido pelo ISP. Essa camada de separação impede conexões diretas da internet para dentro da sua rede.
 
 E assim, sem perceber, você acaba de esbarrar em algo chamado **NAT (Network Address Translation)**. É ele que permite que múltiplos dispositivos compartilhem um único IP público. 
 
